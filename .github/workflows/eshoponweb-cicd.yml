@@ -2,12 +2,11 @@ name: eShopOnWeb Build and Test
 
 #Triggers (uncomment line below to use it)
 on: workflow_dispatch
-
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
    RESOURCE-GROUP: rg-eshoponweb-westeurope
-  LOCATION: West Europe
-  TEMPLATE-FILE: infra/webapp.bicep
+  LOCATION: westeurope
+  TEMPLATE-FILE: eshoponweb-cicd.yml
   SUBSCRIPTION-ID: 38e3d283-71c8-40e2-87ca-bb9fcdbf9928
   WEBAPP-NAME: 212396568
 
