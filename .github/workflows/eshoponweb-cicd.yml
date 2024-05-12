@@ -1,9 +1,6 @@
 name: eShopOnWeb Build and Test
-
-on:
-  push:
-    branches:
-      - main
+#Triggers (uncomment line below to use it)
+on: workflow_dispatch
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
  RESOURCE-GROUP: rg-eshoponweb-westeurope
