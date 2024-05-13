@@ -1,5 +1,5 @@
-param webAppName string = uniqueString(resourceGroup().id) // Generate unique String for web app name
-param sku string = 'S1' // The SKU of App Service Plan
+param webAppName string = uniqueString(resourceGroup().id) // Générer une chaîne unique pour le nom de l'application web
+param sku string = 'S1' // SKU du Plan App Service
 param location string = resourceGroup().location
 
 var appServicePlanName = toLower('AppServicePlan-${webAppName}')
@@ -36,3 +36,7 @@ resource appService 'Microsoft.Web/sites@2020-06-01' = {
     }
   }
 }
+
+// Déclencheur d'événement pour déployer l'infrastructure lorsqu'un commit est poussé sur la branche principale
+target scope = 'resourceGroup'
+output deploymentTrigger on typeof(string) = resourceGroup().id
