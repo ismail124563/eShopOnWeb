@@ -7,7 +7,7 @@ env:
  LOCATION: westeurope
  TEMPLATE-FILE: eshoponweb-cicd.yml
  SUBSCRIPTION-ID: 38e3d283-71c8-40e2-87ca-bb9fcdbf9928
- WEBAPP-NAME: devops-webapp-westeurope-1421222352
+ WEBAPP-NAME: devops-webapp-westeurope-1454511741
 
 
 jobs:
